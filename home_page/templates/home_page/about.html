@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% block content %}
+    
+<div class="wrapper col3">
+    <div id="breadcrumb">
+      <ul>
+        <li class="first">You Are Here</li>
+        <li>&#187;</li>
+        <li><a href="{% url 'home' %}">DS Public</a></li>
+        <li>&#187;</li>
+        <li><a href="{% url 'home_page:about' %}">About</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- ####################################################################################################### -->
+  <div class="wrapper col4">
+    
+    <div id="container">
+      {% for post in about %}
+      <div id="content">
+        
+
+        <img class="imgr" src="{{ post.vision_pic.url }}" alt="" width="125" height="125" />
+        <h1>Our Mission And Vision</h1>
+        <p>Aliquatjusto quisque nam consequat doloreet vest orna partur scetur portortis nam. Metadipiscing eget facilis elit sagittis felisi eger id justo maurisus convallicitur.</p>
+        <p>Dapiensociis <a href="#">temper donec auctortortis cumsan</a> et curabitur condis lorem loborttis leo. Ipsumcommodo libero nunc at in velis tincidunt pellentum tincidunt vel lorem.</p>
+
+        <h1>making difference</h1>
+        <img class="imgl" src="{{ post.making_pic.url }}" alt="" width="150" height="170" />
+    
+        <p>This is a W3C compliant free website template from <a href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a>. This template is distributed using a <a href="http://www.os-templates.com/template-terms">Website Template Licence</a>.</p>
+        <p>You can use and modify the template for both personal and commercial use. You must keep all copyright information and credit links in the template and associated files. For more CSS templates visit <a href="http://www.os-templates.com/">Free Website Templates</a>.</p>
+        <p>You can use and modify the template for both personal and commercial use. You must keep all copyright information and credit links in the template and associated files. For more CSS templates visit <a href="http://www.os-templates.com/">Free Website Templates</a>.</p>
+        <p>You can use and modify the template for both personal and commercial use. You must keep all copyright information and credit links in the template and associated files. For more CSS templates visit <a href="http://www.os-templates.com/">Free Website Templates</a>.</p>
+        <p>Portortornec condimenterdum eget consectetuer condis consequam pretium pellus sed mauris enim. Puruselit mauris nulla hendimentesque elit semper nam a sapien urna sempus.</p>
+        
+        <h2><b><u><center>head master's letter</center></u></b></h2>
+        <p>This is a W3C compliant free website template from <a href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a>. This template is distributed using a <a href="http://www.os-templates.com/template-terms">Website Template Licence</a>.</p>
+        <p>You can use and modify the template for both personal and commercial use. You must keep all copyright information and credit links in the template and associated files. For more CSS templates visit <a href="http://www.os-templates.com/">Free Website Templates</a>.</p>
+        <p>You can use and modify the template for both personal and commercial use. You must keep all copyright information and credit links in the template and associated files. For more CSS templates visit <a href="http://www.os-templates.com/">Free Website Templates</a>.</p>
+        <p>You can use and modify the template for both personal and commercial use. You must keep all copyright information and credit links in the template and associated files. For more CSS templates visit <a href="http://www.os-templates.com/">Free Website Templates</a>.</p>
+        <p>Portortornec condimenterdum eget consectetuer condis consequam pretium pellus sed mauris enim. Puruselit mauris nulla hendimentesque elit semper nam a sapien urna sempus.</p>
+        <!-- <h2>Table(s)</h2>
+        <table summary="Summary Here" cellpadding="0" cellspacing="0">
+          <thead>
+            <tr>
+              <th>Header 1</th>
+              <th>Header 2</th>
+              <th>Header 3</th>
+              <th>Header 4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="light">
+              <td>Value 1</td>
+              <td>Value 2</td>
+              <td>Value 3</td>
+              <td>Value 4</td>
+            </tr>
+            <tr class="dark">
+              <td>Value 5</td>
+              <td>Value 6</td>
+              <td>Value 7</td>
+              <td>Value 8</td>
+            </tr>
+            <tr class="light">
+              <td>Value 9</td>
+              <td>Value 10</td>
+              <td>Value 11</td>
+              <td>Value 12</td>
+            </tr>
+            <tr class="dark">
+              <td>Value 13</td>
+              <td>Value 14</td>
+              <td>Value 15</td>
+              <td>Value 16</td>
+            </tr>
+          </tbody>
+        </table> -->
+
+        
+      </div>
+      <div id="column">
+        <div id="featured">
+          <ul>
+            <li>
+              <h2>Indonectetus facilis leonib</h2>
+              <p class="imgholder"><img src="{{ post.sidebar_pic.url }}" alt=""  width="130" height="140"/></p>
+              <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna. Urnaultrices quis curabitur phasellentesque congue magnis vestibulum quismodo nulla et feugiat. Adipisciniapellentum leo ut consequam ris felit elit id nibh sociis malesuada.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      {% endfor %}
+      <div class="clear"></div>
+    </div>
+    
+  </div>
+ 
+
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+  <div class="container">
+    <div id="breadcrumb">
+      <ul>
+        <li class="first">You Are Here</li>
+        <li>&#187;</li>
+        <li><a href="{% url 'home' %}">DS Public</a></li>
+        <li>&#187;</li>
+        <li><a href="{% url 'home_page:studentlife' %}">Student Life</a></li>
+      </ul>
+    </div>
+    <h2><u><b>Student Lifes</b></u></h2>
+  </div>
+
+  
+    <div id="carouselExampleIndicators" class="carousel slide my-3" data-ride="carousel">
+
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" ></li>
+          <!-- <li data-target="#carouselExampleIndicators" data-slide-to="1"></li> -->
+          {% for i in range %}
+          <li data-target="#carouselExampleIndicators" data-slide-to={{i}}></li>
+          {% endfor %}
+        </ol>
+        <!-- <style> border: 1px solid #ddd; border-radius: 4px; padding: 5px; width: 150px; </style> -->
+
+        <div class="container">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="col-3">
+            <div class="col-md-3 col-md-3 col-md-3">
+             <img class="d-block w-100" src="{{ images.0.pics.url }}" alt="First slide" width="300" height="250">
+             <p>{{ images.0.description }}</p>
+            </div>
+          {% for post in images|slice:"1:" %}
+          <div class="col-md-3 col-md-3 col-md-3">
+            <img class="d-block w-100" src="{{ post.pics.url }}" alt="...." width="300" height="250">
+            <p>{{ post.description }}</p>
+          
+           </div>
+           {% if forloop.counter|divisibleby:3 and forloop.counter > 0 and notforloop.last %}
+           </div><div class="carousel-item"></div>
+           {% endif %}
+        
+          {% endfor %}
+        </div>
+        </div>
+    
+
+        <!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a> -->
+</div>
+</div>
+{% endblock %}

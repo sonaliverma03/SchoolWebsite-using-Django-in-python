@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+  
+  <div id="cont">
+      <div id="breadcrumb">
+        <ul>
+          <li class="first">You Are Here</li>
+          <li>&#187;</li>
+          <li><a href="{% url 'home' %}">DS Public</a></li>
+          <li>&#187;</li>
+          <li><a href="{% url 'contact' %}">contact</a></li>
+        </ul>
+      </div>
+      <div class="abcd">
+    <h2><u> CONTACT US !</u></h2>
+    
+      <form action="{% url 'contact' %}" method="post">
+        <fieldset>
+          <!-- <legend>News Letter</legend>
+          <input type="text" value="Enter Email Here&hellip;"  onfocus="this.value=(this.value=='Enter Email Here&hellip;')? '' : this.value ;" />
+          <input type="submit" name="Name" id="news_go" value="GO" /> -->
+
+          {% csrf_token %}
+      
+        <label>Name</label>
+        <input type="text" name="Name" required>
+    
+        <label>Email</label>
+        <input  type="text" name="Email" required>
+      
+      
+        <label>Message</label>
+        <input  type="text" placeholder="message/query" name="Message" required>
+        
+        <button type="submit" >Send Message</button>
+
+        </fieldset>
+      </form>
+    </div>
+  </div>
+
+</div>
+{% endblock %}
