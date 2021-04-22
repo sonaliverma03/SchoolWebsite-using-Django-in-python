@@ -25,8 +25,6 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('',views.home_stuff,name='home'),
-    # path('',views.HomePageView.as_view(),name='home'),
     path('',views.homeview,name='home'),
     path('contact/',dv.contactView,name='contact'),
     path('home_page/',include('home_page.urls',namespace='home_page')),

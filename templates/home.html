@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-<!-- {% load static %} -->
 {% block content %}
 
 <!-- ####################################################################################################### -->
@@ -34,42 +33,6 @@
 
 
 
-  <!-- <div id="featured_slide">
-    <div id="featured_wrap">
-      {% for post in slides %}
-
-      <ul id="featured_tabs">
-        
-        <li><a href="#{{ post.id }}">{{ post.tittle }}<br /></a></li>
-        
-        <li><a href="#fc2">Library<br /></a></li>
-        <li><a href="#fc3">sports<br /></a></li>
-        <li class="last"><a href="#fc4">something<br /></a></li>
-        
-      </ul>
-      {% if post.id %}
-
-      <div id="featured_content">
-        
-         <div class="featured_box" id="{{ post.id }}"><img src="{{ post.photo.url }}" alt="" /> 
-        <div class="floater"><a href="#">Continue Reading &raquo;</a></div>
-        </div>
-        
-        <div class="featured_box" id="fc2"><img src="images/demo/2.gif" alt="" /> 
-          <div class="floater"><a href="#">Continue Reading &raquo;</a></div>
-        </div>
-        <div class="featured_box" id="fc3"><img src="images/demo/3.gif" alt="" />
-          <div class="floater"><a href="#">Continue Reading &raquo;</a></div>
-        </div>
-        <div class="featured_box" id="fc4"><img src="{% static 'demo/front2.png' %}" alt="" width="200" height="300"/>
-          
-        </div>
-        
-        {% endif %}
-         {% endfor %}
-      </div>
-  
-  </div> -->
 
 </div>
 <!-- ####################################################################################################### -->
@@ -85,19 +48,19 @@
           <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
         </li>
         <li>
-          <h2>Helping students grow</h2>
+          <h2>Helping Students Grow</h2>
           <div class="imgholder"><img src="{{ post.pic2.url }}" alt=""width="200" height="200" /></a></div>
           <p>This template is distributed using a <a href="http://www.os-templates.com/template-terms">Website Template Licence</a>, which allows you to use and modify the template for both personal and commercial use when you keep the provided credit links in the footer.</p>
           <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
         </li>
         <li>
-          <h2>Teachers</h2>
+          <h2>Faculty and staff</h2>
           <div class="imgholder"><img src="{{ post.pic3.url }}" alt="" width="200" height="200"/></a></div>
           <p>Seddui vestibulum vest mi liberos estibulum urna at eget amet sed. Etmetus consectetuer leo nisl justo sed vest vitae nunc massa scelerit. Namaucibulum lor ligula nullam risque et ristie sollis sapien nulla neque.</p>
           <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
         </li>
         <li class="last">
-          <h2>Affiliation and Collaboration</h2>
+          <h2>Affiliation Collaboration</h2>
           <div class="imgholder"><img src="{{ post.pic4.url }}" alt="" width="200" height="200"/></a></div>
           <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi pen as dapibulum orna. Urna ultrices quis curabitur phasellentesque congue magnis vestibulum. Orcieleifendimentum risuspenatoque massa nunc.</p>
           <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
@@ -123,20 +86,5 @@
   </div>
     
     <br class="clear" />
-
-
-<!-- <div class="container">  
-  <h1><u><b>Recent Events</b></u></h1>
-  <div class="row">
-    <div class="column">
-      {% for post in images %}
-    <img src="{{ post.pics.url }}" alt="Table Setting" width="200" height="300">
-    
-    {% endfor %} -->
-    <!-- </div>
-  </div>
-</div> -->
-<!-- ####################################################################################################### -->
-
 
 {% endblock %}
